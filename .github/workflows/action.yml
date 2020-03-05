@@ -1,7 +1,7 @@
 name: Upload to S3
 
 on: release
-  types: [published]
+  types: [ published  ]
 
 jobs:
   upload:
