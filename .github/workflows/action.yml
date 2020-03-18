@@ -32,7 +32,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: ${{ secrets.AWS_REGION }}
 
       - name: "Download files using the release URLs received earlier"
         run: |
@@ -44,4 +44,4 @@ jobs:
       - name: "Copy file to S3 bucket"
         run: "aws s3 sync . s3://$AWS_S3_BUCKET/${{ steps.get_info.outputs.version }}"
         env:
-          AWS_S3_BUCKET: simpleinout-releases
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
