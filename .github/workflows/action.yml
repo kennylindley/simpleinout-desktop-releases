@@ -42,6 +42,6 @@ jobs:
           done
 
       - name: "Copy file to S3 bucket"
-        run: "aws s3 sync . s3://$AWS_S3_BUCKET/${{ steps.get_info.outputs.version }}"
+        run: "aws s3 sync --delete . s3://$AWS_S3_BUCKET/desktop/latest"
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
