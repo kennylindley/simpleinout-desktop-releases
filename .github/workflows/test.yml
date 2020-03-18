@@ -28,7 +28,7 @@ jobs:
       - name: Setup code coverage
         uses: paambaati/codeclimate-action@v2.5.5
         env:
-          CC_TETS_REPORTER_ID: 81aa23df53dbb8657e66c25de1b4a0d7822e204c8721fcbcde3989ec1352f619
+          CC_TEST_REPORTER_ID: 81aa23df53dbb8657e66c25de1b4a0d7822e204c8721fcbcde3989ec1352f619
         with:
           coverageCommand: yarn test
 
