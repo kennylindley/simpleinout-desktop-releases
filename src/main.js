@@ -11,6 +11,7 @@ function run() {
     if (count > 0) {
       urls = `${urls},`;
     }
+
     urls = `${urls}${asset.browser_download_url}`;
     count++;
   });
