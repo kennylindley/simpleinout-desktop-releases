@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-
+        
       - name: Setup code coverage
         uses: paambaati/codeclimate-action@v2.5.5
         env:
