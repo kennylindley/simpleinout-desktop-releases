@@ -1,23 +1,21 @@
 {
-  "name": "get-release-info",
+  "name": "simpleinout-desktop-releases",
   "version": "1.0.0",
   "private": true,
   "description": "Get the info from a release",
-  "main": "dist/index.js",
+  "main": "src/main.js",
   "scripts": {
-    "lint": "eslint 'src/**.js' 'tests/**.js' --fix",
-    "test": "jest --coverage",
-    "build": "ncc build src/main.js"
+    "lint": "eslint 'src/**.js'",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kennylindley/get-release-info"
+    "url": "git+https://github.com/simplymadeapps/simpleinout-desktop-releases"
   },
   "keywords": [
     "actions",
     "node"
   ],
-  "author": "kennylindley",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.0.0"
@@ -25,15 +23,7 @@
   "devDependencies": {
     "@zeit/ncc": "^0.20.4",
     "eslint": "^5.13.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.6.0",
     "eslint-config-simplymadeapps": "^1.5.2",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^2.7.0",
-    "eslint-plugin-react": "^7.12.4",
-    "husky": "^3.0.5",
-    "jest": "^25.1.0",
-    "prettier": "^1.16.4"
+    "jest": "^25.1.0"
   }
 }
