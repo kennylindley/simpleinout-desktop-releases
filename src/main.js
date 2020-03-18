@@ -8,7 +8,6 @@ function run() {
   urls = urls.join(",");
 
   core.setOutput("urls", urls);
-  core.setOutput("version", releaseInfo.release.name);
 }
 
 exports.run = run;
