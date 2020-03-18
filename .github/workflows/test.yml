@@ -2,6 +2,7 @@ name: Test Github Action
 
 on:
   pull_request:
+    types: [ opened, edited ]
     branches: [ master ]
 
 jobs:
