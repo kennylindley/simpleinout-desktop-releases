@@ -11,10 +11,20 @@ jobs:
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
-        
+
+      - name: Install node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Install dependencies
+        uses: borales/actions-yarn@v2.1.0
+        with:
+          cmd: install
+
       - name: Get the release assets info
         uses: node12
-        main: dist/index.js
+        main: src/index.js
         id: get_info
 
       - name: "Configure AWS credentials"
